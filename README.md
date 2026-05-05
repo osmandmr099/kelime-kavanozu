@@ -36,17 +36,17 @@ src/
 ## 🧐 Kod Yapısına Bakış (Gözlemler)
 - **Modüler Yapı:** Proje; `Components`, `Pages` ve `Interfaces` klasörlerine bölünerek kod okunabilirliği artırılmıştır.
 - **Veri Yönetimi:** Başlangıç verileri merkezi bir sabit dosyasından (`Interfaces/Sabitler.js`) çekilmekte, state yönetimi ise `AnaSayfa.jsx` üzerinden sağlanmaktadır.
-- **Tasarım:** **Bootstrap 5** ve modern **Glassmorphism** (Buzlu Cam) stili birleştirilerek ilgi çekici bir arayüz oluşturulmuştur.
+- **Tasarım:** Görsel tarafta modern bir görünüm için **Bootstrap 5** kütüphanesi kullanılmıştır.
 - **Sıralama Mantığı:** Kullanıcı deneyimi için yeni eklenen kelimeler en başa, öğrenilen kelimeler ise listenin en sonuna otomatik olarak taşınmaktadır.
 
 ## 🚀 Kullanılan Teknolojiler
-- **Kütüphane:** React JS (Vite)
-- **Tasarım:** Bootstrap 5 & Bootstrap Icons
-- **Stil:** Pure CSS (Custom Styling)
+- **Kütüphane:** React JS
+- **Tasarım:** Bootstrap 5
+- **Stil:** CSS
 
 ## 🛠️ Özellikler (CRUD)
 1. **Ekle:** Form üzerinden yeni kelime ve anlamı kavanoza eklenebilir.
-2. **Listele:** Eklenen kelimeler modern kartlar halinde listelenir.
+2. **Listele:** Eklenen kelimeler kartlar halinde listelenir.
 3. **Güncelle:** - Kelime ve anlamlar kalem ikonuyla düzenlenebilir.
    - Göz ikonuyla anlamlar gizlenip/gösterilebilir.
    - "Öğrendim" butonuyla kelime durumu güncellenerek listenin sonuna itilir.
