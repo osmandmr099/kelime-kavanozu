@@ -6,52 +6,52 @@ Bu proje, **TNC Group / Software Persona** bünyesinde gerçekleştirdiğim staj
 İngilizce kelime öğrenme sürecini daha interaktif ve eğlenceli hale getirmek için tasarlanmıştır. Bu uygulama ile yeni kelimeler ekleyebilir, anlamlarını gizleyerek kendinizi test edebilir ve öğrendiğiniz kelimeleri takip edebilirsiniz.
 
 ## 📦 Kurulum
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki komutları kullanabilirsiniz:
 
-Projeyi kendi bilgisayarınızda çalıştırmak için şu adımları izleyin:
-
+```bash
 # Bağımlılıkları yükle
 npm install
 
 # Geliştirme sunucusunu başlat
 npm run dev
+```
 
 ## 📁 Proje Yapısı (Dosya Yolları)
+Proje, yönergeye uygun olarak modüler bir yapıda kurgulanmıştır:
 
-Proje, mantıksal parçalara bölünmüş modüler bir yapıda inşa edilmiştir:
-
+```text
 src/
 ├── Components/
-│   ├── WordCard.jsx      # Kelimelerin sergilendiği ve düzenlendiği kart bileşeni
-│   └── WordForm.jsx      # Yeni kelime ekleme formu
+│   ├── WordCard.jsx      # Kelime kartı bileşeni (Güncelleme ve Silme)
+│   └── WordForm.jsx      # Kelime ekleme formu bileşeni (Ekleme)
 ├── Interfaces/
-│   └── Sabitler.js       # Uygulama açılışındaki varsayılan kelime listesi
+│   └── Sabitler.js       # Varsayılan kelime verilerinin tutulduğu yer
 ├── Pages/
-│   └── AnaSayfa.jsx      # Tüm parçaların birleştiği ana ekran
-├── App.jsx               # Uygulamanın ana giriş dosyası
-├── index.css             # Tasarım ve Buzlu Cam (Glassmorphism) stilleri
-└── main.jsx              # React'in başlatıldığı kök dosya
-
+│   └── AnaSayfa.jsx      # Tüm bileşenlerin birleştiği ana ekran
+├── App.jsx               # Uygulamanın giriş noktası
+├── index.css             # Özel cam efekti (Glassmorphism) ve genel stiller
+└── main.jsx              # React DOM render dosyası
+```
 
 ## 🧐 Kod Yapısına Bakış (Gözlemler)
-
-- **Modüler Yapı:** Proje, `Components`, `Pages` ve `Interfaces` şeklinde klasörlenmiştir. Bu sayede kodlar daha düzenli ve okunabilir durmaktadır.
-- **Veri Yönetimi:** Varsayılan kelimeler `Interfaces/Sabitler.js` dosyasından gelmektedir. Veri akışı ana sayfa üzerinden sağlanmaktadır.
-- **Tasarım:** Görsel tarafta modern bir görünüm için **Bootstrap 5** kütüphanesi ve **"Glassmorphism" (Buzlu Cam)** efekti sağlayan özel CSS dokunuşları kullanılmıştır.
-- **Sıralama Mantığı:** Kod, kullanıcı deneyimini artırmak için öğrenilmeyen kelimeleri her zaman üstte, öğrenilenleri ise listenin en altında gösterecek şekilde kurgulanmıştır.
+- **Modüler Yapı:** Proje; `Components`, `Pages` ve `Interfaces` klasörlerine bölünerek kod okunabilirliği artırılmıştır.
+- **Veri Yönetimi:** Başlangıç verileri merkezi bir sabit dosyasından (`Interfaces/Sabitler.js`) çekilmekte, state yönetimi ise `AnaSayfa.jsx` üzerinden sağlanmaktadır.
+- **Tasarım:** **Bootstrap 5** ve modern **Glassmorphism** (Buzlu Cam) stili birleştirilerek ilgi çekici bir arayüz oluşturulmuştur.
+- **Sıralama Mantığı:** Kullanıcı deneyimi için yeni eklenen kelimeler en başa, öğrenilen kelimeler ise listenin en sonuna otomatik olarak taşınmaktadır.
 
 ## 🚀 Kullanılan Teknolojiler
-- **Kütüphane:** React JS
-- **Tasarım:** Bootstrap 5
-- **Stil:** Pure CSS
+- **Kütüphane:** React JS (Vite)
+- **Tasarım:** Bootstrap 5 & Bootstrap Icons
+- **Stil:** Pure CSS (Custom Styling)
 
 ## 🛠️ Özellikler (CRUD)
-1. **Ekle:** Form aracılığıyla kelime ve anlamı girilebilir.
-2. **Listele:** Eklenen tüm kelimeler kartlar şeklinde görüntülenir.
-3. **Güncelle:** - Kelime ve anlamlar düzenlenebilir.
-   - Göz ikonu ile anlamlar gizlenebilir/gösterilebilir.
-   - "Öğrendim" butonu ile kelime durumu güncellenebilir.
-4. **Sil:** Artık ihtiyaç duyulmayan kelimeler kavanozdan kaldırılabilir.
-5. **Sayaç:** Sağ üst köşedeki sayaç ile kaç kelime öğrenildiği anlık takip edilebilir.
+1. **Ekle:** Form üzerinden yeni kelime ve anlamı kavanoza eklenebilir.
+2. **Listele:** Eklenen kelimeler modern kartlar halinde listelenir.
+3. **Güncelle:** - Kelime ve anlamlar kalem ikonuyla düzenlenebilir.
+   - Göz ikonuyla anlamlar gizlenip/gösterilebilir.
+   - "Öğrendim" butonuyla kelime durumu güncellenerek listenin sonuna itilir.
+4. **Sil:** Çöp kutusu ikonu ile kelimeler listeden kaldırılabilir.
+5. **Sayaç:** Sağ üst köşedeki sayaç ile kaç kelimenin öğrenildiği anlık takip edilir.
 
 ---
 *Bu çalışma, staj sürecindeki gelişimimi yansıtan bir Frontend uygulama örneğidir.*
