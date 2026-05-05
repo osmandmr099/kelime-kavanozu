@@ -6,7 +6,6 @@ Bu proje, **TNC Group / Software Persona** bünyesinde gerçekleştirdiğim staj
 İngilizce kelime öğrenme sürecini daha interaktif ve eğlenceli hale getirmek için tasarlanmıştır. Bu uygulama ile yeni kelimeler ekleyebilir, anlamlarını gizleyerek kendinizi test edebilir ve öğrendiğiniz kelimeleri takip edebilirsiniz.
 
 ## 🧐 Kod Yapısına Bakış (Gözlemler)
-Sıfırdan koda bakan biri için projenin organizasyonu şu şekildedir:
 
 - **Modüler Yapı:** Proje, yönergeye uygun olarak `Components`, `Pages` ve `Interfaces` şeklinde klasörlenmiştir. Bu sayede kodlar daha düzenli ve okunabilir durmaktadır.
 - **Veri Yönetimi:** Varsayılan kelimeler `Interfaces/Sabitler.js` dosyasından gelmektedir. Veri akışı (state yönetimi) ana sayfa üzerinden sağlanmaktadır.
